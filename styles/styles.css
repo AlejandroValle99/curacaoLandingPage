@@ -1,0 +1,292 @@
+@import url(./fontsVar.css);
+@import url(./cardStyle.css);
+
+
+/*General STYLES*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --text-multiplier: 1;
+}
+
+
+body{
+    background-color: rgb(244, 244, 244);
+}
+
+main{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.flexContainer{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+/*/////////////////////////////////////*/
+
+
+.promoHeader{
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.promoHeader h1{
+    font-family: "Open Sans Semibold";
+    /* font-size: 2.4rem; */
+    font-size: calc(1.6rem * var(--text-multiplier));
+    line-height: calc(2.2rem* var(--text-multiplier));
+}
+
+.promoHeader span{
+    font-family: "Open Sans Bold";
+    /* font-size: 5rem; */
+    font-size: calc(2.8rem * var(--text-multiplier));
+    line-height: calc(3rem* var(--text-multiplier));
+}
+
+
+
+
+
+.plusDivision {
+    margin-top: 4.5rem;
+  }
+  
+  .plusDivision .line {
+    width: 43.5rem;
+    height: 1px;
+    border: 1px solid #d0d0d0;
+  }
+  
+  .plusDivision .plus {
+    font-family: "Open Sans Semibold";
+    font-size: calc(1.6rem*var(--text-multiplier));
+    padding: 0 1rem;
+    font-weight: bold;
+  }
+
+  .benefits-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .benefits-container div p:nth-of-type(1){
+    font-family: "Open Sans Bold";
+    font-size: calc(2.8rem*var(--text-multiplier));
+    color: white;
+    line-height: calc(4rem*var(--text-multiplier));
+  }
+
+  .benefits-container div p:nth-of-type(2){
+    font-family: "Open Sans SemiBold";
+    font-size: calc(1.4rem*var(--text-multiplier));
+    color: white;
+    line-height: calc(3rem*var(--text-multiplier));
+  }
+  
+  .benefits-container .priceBox {
+    flex: 1 1 auto;
+    max-width: 43rem;
+    height: 14rem;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem;
+  }
+
+  .benefits-container .skyBlue{
+    border: 1px solid #3fc2d9;
+    background-color: #3fc2d9;
+  }
+
+  .benefits-container .darkBlue{
+    background-color: #2578ad;
+    border: 1px solid #2578ad;
+  }
+
+  .circle {
+    font-family: "Open Sans Bold";
+    font-size: 1.2rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    color: white;
+    background-color: black;
+  }
+  
+
+
+
+
+
+.promotionsParagraph{
+    margin-top: 4rem;
+    font-family: "Open Sans Semibold";
+    font-size: calc(1.4rem*var(--text-multiplier));
+    line-height: calc(1.8rem*var(--text-multiplier));
+    color: #373737;
+  }
+
+.promotions-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 2rem auto 2rem auto;
+}
+  
+.promotions-container > div {
+    font-family: "Open Sans Bold";
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    flex: 1;
+    border-right: 1px solid #373737;
+    padding: 1rem;
+    text-align: center;
+}
+  
+.promotions-container > div:last-child {
+    border-right: none;
+}
+
+
+.bookButton{
+  text-align: center;
+  display: block;
+  margin: auto;
+  font-family: "Open Sans Bold";
+  font-size: calc(1.8rem*var(--text-multiplier));
+  line-height: calc(3rem*var(--text-multiplier));
+  background-color: black;
+  color: white;
+  width: 35rem;
+  height: 5rem;
+  margin-bottom: 10rem;
+}
+
+
+
+
+.preFooter{
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 8rem ;
+}
+
+.preFooter h3,p{
+  flex:1;
+}
+
+.preFooter h3{
+  font-family: "Open Sans Semibold";
+  font-size: calc(2rem*var(--text-multiplier));
+  line-height: calc(2.6rem*var(--text-multiplier));
+  color: #447daa;
+}
+
+.preFooter p:nth-child(2){
+  font-family: "Open Sans Bold";
+  font-size: calc(1.6rem*var(--text-multiplier));
+  line-height: calc(2.2rem *var(--text-multiplier));
+  color: black;
+}
+
+.preFooter p:nth-child(3){
+  font-family: "Open Sans Regular";
+  font-size: calc(1.2rem*var(--text-multiplier));
+  line-height: calc(2.2rem*var(--text-multiplier));
+  color: black;
+}
+
+.preFooter span{
+  text-decoration: underline;
+}
+
+.preFooter p:nth-child(4){
+  font-family: "Open Sans Bold";
+  font-size: calc(1.2rem*var(--text-multiplier));
+  line-height: calc(2rem*var(--text-multiplier));
+  color: black;
+}
+
+.preFooter a{
+  text-decoration: none;
+  color: black;
+}
+
+
+
+/*///////////////////MEDIA QUERIES///////////*/
+
+@media screen and (max-width: 1921px) {
+
+  :root{
+    --text-multiplier:1.4;
+  }
+
+}
+
+@media screen and (max-width: 769px) {
+
+  :root{
+    --text-multiplier:1.2;
+  }
+
+  .benefits-container{
+   flex-wrap: nowrap;
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 376px) {
+
+  :root{
+    --text-multiplier:1;
+  }
+  .benefits-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefits-container .priceBox {
+    width: 100%;
+    height: 100%;
+    margin: 1rem 0;
+  }
+
+  
+
+  .promotions-container {
+    flex-direction: column;
+  }
+  
+  .promotions-container > div {
+    border-right: none;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #d0d0d0;
+  }
+
+  .promotions-container > div:last-child {
+    border-bottom: none;
+  }
+
+  .bookButton {
+    width: 70%;
+    height: 4rem;
+  }
+
+}
+
+
+/*/////////////Media queries for Card located in cardStyle.css/////////*/
+
+
+
+

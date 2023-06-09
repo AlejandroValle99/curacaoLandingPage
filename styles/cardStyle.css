@@ -1,0 +1,253 @@
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.20);
+    width: 113rem;
+    height: 41rem;
+    margin: auto;
+  }
+  
+  .card .image {
+    flex: 0 0 auto;
+    width: 35rem;
+    height: 41rem;
+    margin-right: 20px;
+  }
+  
+  .card .content {
+    flex: 1 1 auto;
+  }
+  
+  .card .title {
+    font-family: "Open Sans Regular";
+    font-size: calc(1.8rem*var(--text-multiplier));
+    line-height: calc(2rem*var(--text-multiplier));
+  }
+  
+  .card .content hr {
+    margin-top: 2rem;
+    border: none;
+    border-top: 1px solid #ebebeb;
+  }
+  
+  .card .content .location{
+    font-style: normal;
+    font-family: "Open Sans Semibold";
+    font-size: 1rem;
+    line-height: 1.4rem;
+    margin-bottom: 2rem;
+    
+  }
+  
+  .card .content .description {
+    flex: 1 1 auto;
+    font-family: "Open Sans Semibold";
+    font-size: calc(1rem*var(--text-multiplier));
+    line-height: calc(1.8rem*var(--text-multiplier));
+    margin-right: 6rem;
+  }
+  
+  .card .content a {
+    font-family: "Open Sans Bold";
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 2rem;
+  }
+  
+  .card .datesContainer {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+  }
+  
+  .card .datesContainer div {
+    flex: 0.3;
+    margin: 2rem;
+  
+  }
+  
+  .card .datesContainer div:first-child {
+    border-right: 1px solid #ccc;
+  }
+  
+  .card .datesContainer p {
+    margin: 0;
+    font-family: "Open Sans Bold";
+    font-size: calc(1.2rem*var(--text-multiplier));
+    line-height: calc(2.2rem*var(--text-multiplier));
+    color: #447daa;
+  }
+  
+  .card .datesContainer p:nth-child(even) {
+    font-family: "Open Sans Semibold";
+    color: black;
+  }
+  
+  
+  .card .buttonsContainer{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+  }
+  
+  .card .buttonsContainer div{
+    text-align: center;
+  }
+  
+  .card .buttonsContainer div button{
+      font-family: "Open Sans Bold";
+      font-size: calc(1.2rem*var(--text-multiplier));
+      line-height: 3rem;
+      background-color: #ebebeb ;
+      text-align: center;
+      margin: 1rem;
+      width: 21rem;
+      height: 3.5rem;
+  }
+
+  .card .buttonsContainer div button span{
+    color: #447daa;
+  }
+  
+  .card .buttonsContainer div:nth-child(2) button{
+    color: white ;
+    background-color: black ;
+   
+  }
+  
+  
+  .card {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  
+  .ribbon {
+    font-family: "Open Sans Bold";
+    font-size: 1.4rem;
+    line-height: 4rem;
+    margin: 0;
+    padding: 0;
+    background: #00b8f4;
+    color:white;
+    position: absolute;
+    top:0;
+    right:0;
+    transform: translateX(30%) translateY(0%) rotate(45deg);
+    transform-origin: top left;
+  }
+  
+  .ribbon:before,
+  .ribbon:after {
+    content: '';
+    position: absolute;
+    top:0;
+    margin: 0 -1px; /* tweak */
+    width: 100%;
+    height: 100%;
+    background: #00b8f4;
+  }
+  .ribbon:before {
+    right:100%;
+  }
+  
+  .ribbon:after {
+    left:100%;
+  }
+  
+
+ 
+
+  @media (max-width: 1459px) {
+    .card {
+      width: 100%;
+      height: auto;
+    }
+
+
+    .card image{
+      width: 100%;
+      height: auto;
+    }
+  
+    .card .content{
+      margin: 2rem;
+    }
+
+    
+  
+  .card .buttonsContainer div button {
+    width: 100%; 
+  }
+
+  
+  }
+  
+
+  @media (max-width: 767px) {
+    .card {
+      flex-wrap: wrap;
+      height: auto;
+    }
+    
+    .card .image {
+      width: 100%; 
+      margin-right: 0;
+    }
+    
+    
+    .card .datesContainer,
+    .card .buttonsContainer {
+      justify-content: start;
+      flex-basis: 100%;
+      margin-top: 1rem;
+    }
+    
+    .card .datesContainer div,
+    .card .buttonsContainer div {
+      margin: 1rem;
+    }
+    
+    .card .buttonsContainer div button {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 376px) {
+    .card {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    
+    .card .image {
+      width: 100%; 
+      height: auto; 
+      margin-bottom: 1rem; 
+    }
+    
+    .card .content .description{
+      margin-right: 0; /* Remove original margin*/
+    }
+    
+    .card .datesContainer,
+    .card .buttonsContainer {
+      flex-direction: row;
+      align-items: flex-start; /* Center align the items */
+      justify-content: center;
+      width: 100%;
+    }
+
+  
+   
+    .card .buttonsContainer div button {
+      width: 100%; /*To prevent text overflow of the button*/
+      white-space: nowrap;
+    }
+
+    .ribbon{
+      display: none;
+    }
+  }
